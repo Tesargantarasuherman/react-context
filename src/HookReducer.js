@@ -42,7 +42,7 @@ export default function HookReducer() {
                     </div>
                     <div className="col-md-12">
                         <button className="btn btn-success">
-                            Total Rp. {count.harga_total}
+                            Total Rp. {count.jumlah == 1  ? count.harga_satuan : count.harga_total}
                         </button>
                     </div>
                 </div>
