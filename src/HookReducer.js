@@ -27,7 +27,7 @@ export default function HookReducer() {
         <div className="card" >
             <div className="card-body">
                 <h5 className="card-title">Acer</h5>
-                <p className="card-text">Rp, 7.000.000</p>
+                <p className="card-text">Rp, {count.harga_satuan}</p>
                 <div className="row">
                     <div className="col-md-4">
                         <button className="btn btn-danger" onClick={() => dispatch({ type: 'tambah' })}>+</button>
