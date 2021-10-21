@@ -6,8 +6,14 @@ const initialState = {
 }
 const reducer = (state, action) => {
     switch (action){
-        case 'tambah' : return state + 1
-        case 'kurang' : return state - 1
+        case 'tambah' : return {
+            ...state,
+            jumlah:state.jumlah + 1
+
+        }
+        case 'kurang' : return {
+            jumlah:state.jumlah - 1
+        }
         default:
             return state
     }
@@ -25,7 +31,7 @@ const reducer = (state, action) => {
                             <button className="btn btn-danger" onClick={()=>dispatch('tambah')}>+</button>
                         </div>
                         <div className="col-md-4">
-                        <button className="btn btn-primary">{count <0 ? 0 :count}</button>
+                        <button className="btn btn-primary">{count.jumlah <0 ? 0 :count.jumlah}</button>
                         </div>
                         <div className="col-md-4">
                             <button className="btn btn-white" onClick={()=>dispatch('kurang')}>-</button>
