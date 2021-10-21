@@ -13,6 +13,7 @@ const reducer = (state, action) => {
 
         }
         case 'kurang': return {
+            ...state,
             jumlah: state.jumlah - 1,
             harga_total: (state.harga_satuan * state.jumlah) - state.harga_satuan
         }
