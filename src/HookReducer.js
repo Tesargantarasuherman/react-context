@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react'
 const initialState = {
     jumlah: 1,
-    harga_satuan: 10000,
+    harga_satuan: 100000,
     harga_total: 0
 }
 const reducer = (state, action) => {
